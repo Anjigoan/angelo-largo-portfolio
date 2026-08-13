@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angelo Largo | Frontend Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Angelo Largo, a BS Computer Science student seeking OJT opportunities in frontend web development or support.">
+  <meta name="theme-color" content="#12302f">
+  <meta property="og:title" content="Angelo Largo | Frontend Developer Portfolio">
+  <meta property="og:description" content="BS Computer Science student focused on web development, communication, and continuous learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero-workspace.JPG">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Angelo Largo home">
+      <span class="brand-mark" aria-hidden="true">AL</span>
+      <span>Angelo Largo</span>
+    </a>
+
+    <button class="icon-button menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Primary navigation" data-nav>
+      <a href="#profile">Profile</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">Computer Science student seeking OJT</p>
+        <h1>Frontend-focused web developer in training.</h1>
+        <p class="hero-lede">I am an upcoming 4th year BS Computer Science student at Xavier University Ateneo de Cagayan, focused on website projects, clear communication, and learning modern web development practices.</p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="button button-primary" href="mailto:angelo.largo27@gmail.com">
+            <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 6h16v12H4z"></path>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg>
+            Email me
+          </a>
+          <a class="button button-secondary" href="#projects">
+            <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M8 6h12"></path>
+              <path d="M8 12h12"></path>
+              <path d="M8 18h12"></path>
+              <path d="M4 6h.01"></path>
+              <path d="M4 12h.01"></path>
+              <path d="M4 18h.01"></path>
+            </svg>
+            View projects
+          </a>
+        </div>
+      </div>
+
+      <figure class="hero-media">
+        <img src="assets/hero-workspace.JPG" alt="Portrait of Angelo Largo in a bright city street setting.">
+      </figure>
+    </section>
+
+    <section class="section profile-section" id="profile">
+      <div class="section-heading">
+        <p class="eyebrow">Profile</p>
+        <h2>Clear, cooperative, and ready to grow in a real development team.</h2>
+      </div>
+      <div class="profile-grid">
+        <article class="profile-panel">
+          <h3>About</h3>
+          <p>I enjoy tinkering with websites and understanding how interfaces are put together. My goal is to become a full-time web developer in a strong company where I can keep improving through real projects and team feedback.</p>
+        </article>
+        <article class="profile-panel">
+          <h3>OJT Target</h3>
+          <p>I am looking for an internship or OJT placement connected to web development, preferably frontend work or a support role where communication and problem solving matter.</p>
+        </article>
+        <article class="profile-panel">
+          <h3>Location</h3>
+          <p>Cagayan de Oro City, Philippines. Available for local opportunities and remote-friendly collaboration depending on the company setup.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section work-section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Featured projects.</h2>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="card-index">01</div>
+          <p class="project-type">Web App</p>
+          <h3>Flirt-It</h3>
+          <p>An existing web project that can be presented as a case study with its goal, features, interface decisions, and development process.</p>
+          <ul class="project-tags" aria-label="Technologies used">
+            <li>Web development</li>
+            <li>UI practice</li>
+            <li>Local project</li>
+          </ul>
+        </article>
+
+        <article class="work-card">
+          <div class="card-index">02</div>
+          <p class="project-type">Collection System</p>
+          <h3>MDO-XCCA Collection System</h3>
+          <p>A collection management system project. The live system is not deployed because the project is covered by a confidentiality agreement.</p>
+          <ul class="project-tags" aria-label="Technologies used">
+            <li>System project</li>
+            <li>CRUD workflow</li>
+            <li>Restricted demo</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2>A practical foundation for frontend work and technical support.</h2>
+      </div>
+
+      <div class="tabs" data-tabs>
+        <div class="tab-list" role="tablist" aria-label="Skill categories">
+          <button class="tab-button is-active" type="button" role="tab" aria-selected="true" aria-controls="frontend-panel" id="frontend-tab" data-tab="frontend">Frontend</button>
+          <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="programming-panel" id="programming-tab" data-tab="programming">Programming</button>
+          <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="workflow-panel" id="workflow-tab" data-tab="workflow">Workflow</button>
+        </div>
+
+        <div class="tab-panel is-active" role="tabpanel" id="frontend-panel" aria-labelledby="frontend-tab" data-panel="frontend">
+          <ul class="skill-list">
+            <li>React fundamentals and component-based interface building</li>
+            <li>Responsive layout planning for desktop and mobile screens</li>
+            <li>HTML and CSS structure for clean website pages</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="programming-panel" aria-labelledby="programming-tab" data-panel="programming" hidden>
+          <ul class="skill-list">
+            <li>Python for coursework, logic practice, and problem solving</li>
+            <li>Java fundamentals from academic programming work</li>
+            <li>Interest in learning current web development tools and patterns</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="workflow-panel" aria-labelledby="workflow-tab" data-panel="workflow" hidden>
+          <ul class="skill-list">
+            <li>Visual Studio Code as the primary development environment</li>
+            <li>Cooperative communication with classmates and teammates</li>
+            <li>Support-oriented mindset for asking questions and clarifying issues</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education-section" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">Education</p>
+        <h2>Academic background and internship readiness.</h2>
+      </div>
+
+      <div class="accordion" data-accordion>
+        <article class="accordion-item is-open">
+          <button class="accordion-trigger" type="button" aria-expanded="true">
+            <span>Xavier University Ateneo de Cagayan</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>BS in Computer Science. Expected graduation year: 2027.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span>Current Status</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content" hidden>
+            <p>Upcoming 4th year student preparing for an OJT role related to frontend web development or technical support.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span>Growth Focus</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content" hidden>
+            <p>Learning more modern web development practices while strengthening communication, teamwork, and practical problem-solving habits.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-copy">
+        <p class="eyebrow">Contact</p>
+        <h2>Available for OJT conversations.</h2>
+        <p>For frontend, web development, or support opportunities, email is the best first contact.</p>
+      </div>
+
+      <div class="contact-actions">
+        <a class="button button-primary" href="mailto:angelo.largo27@gmail.com">
+          <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M4 6h16v12H4z"></path>
+            <path d="m4 7 8 6 8-6"></path>
+          </svg>
+          angelo.largo27@gmail.com
+        </a>
+        <a class="button button-secondary" href="tel:+639270285246">
+          <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path>
+          </svg>
+          0927 028 5246
+        </a>
+        <button class="button button-quiet" type="button" data-copy-email>
+          <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          Copy email
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Angelo Largo. BS Computer Science, Xavier University Ateneo de Cagayan.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
