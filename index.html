@@ -26,9 +26,8 @@
   <meta name="twitter:image:alt" content="Angelo Largo logo on business cards, an app icon and a sticker">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Caveat:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/webp" imagesrcset="/assets/angelo-hero-360.webp 360w, /assets/angelo-hero-603.webp 603w" imagesizes="(max-width: 860px) 310px, 395px" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
@@ -167,7 +166,7 @@
 
       <h1 class="hero-title"><span class="hero-name"><span class="rise" style="--delay:0.15s">A</span><span class="rise" style="--delay:0.23s">N</span><span class="rise" style="--delay:0.31s">G</span><span class="rise" style="--delay:0.39s">E</span><span class="rise" style="--delay:0.47s">L</span><span class="rise" style="--delay:0.55s">O</span></span> <span class="hero-surname fade" style="--delay:1.5s"><span>L</span><span>A</span><span>R</span><span>G</span><span>O</span></span><span class="visually-hidden">, frontend web developer</span></h1>
 
-      <img class="hero-portrait" src="/assets/angelo-hero.png" alt="Angelo Largo smiling, hands in pockets" width="603" height="1100" fetchpriority="high">
+      <img class="hero-portrait" src="/assets/angelo-hero-603.webp" srcset="/assets/angelo-hero-360.webp 360w, /assets/angelo-hero-603.webp 603w" sizes="(max-width: 860px) 310px, 395px" alt="Angelo Largo smiling, hands in pockets" width="603" height="1100" fetchpriority="high">
 
       <div class="hero-note hero-note--left">
         <p class="hand pop" style="--rot:-8deg;--delay:1.6s">web developer<br>&amp; problem solver</p>
@@ -196,7 +195,7 @@
         <span class="sticker" style="right:6%;top:60%;--bg:var(--color-pink);--rot:-6deg">Python</span>
       </div>
 
-      <a class="hire-card fade" style="--delay:2.4s" href="/contact" aria-label="Open to developer jobs. Hire me">
+      <a class="hire-card fade" style="--delay:2.4s" href="/contact">
         <span class="status-dot"></span>
         <span class="hire-card-text"><b>Open to developer jobs</b><br><small>Freelance welcome too</small></span>
         <span class="hire-card-btn">Hire me <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#1E2214" stroke-width="2.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"></path></svg></span>
@@ -216,7 +215,7 @@
     <p class="hand statement-hello tilt-left">hey, I’m Angelo —</p>
     <h2>
       I design &amp; build websites with <span class="it text-olive">personality</span>
-      <img class="statement-photo" src="/assets/angelo-peace.jpg" alt="Angelo smiling and making a peace sign" width="800" height="400">
+      <img class="statement-photo" src="/assets/angelo-peace-340.webp" alt="Angelo smiling and making a peace sign" width="340" height="170">
       — responsive, fast, and shipped with <span class="statement-ai">AI</span> as my co-pilot.
     </h2>
     <div class="btn-row">
@@ -242,7 +241,7 @@
     <div class="bento">
       <a class="work-tile work-tile--wide" href="/work" style="--tile-bg:#ffd3c4;--tile-title:38px">
         <div class="work-tile-media">
-          <img src="/assets/project-flirt-it.jpg" alt="Flirt-It dating app: swipe, match and chat screens" width="1800" height="1125" loading="lazy">
+          <img src="/assets/project-flirt-it-1200.webp" srcset="/assets/project-flirt-it-640.webp 640w, /assets/project-flirt-it-1200.webp 1200w" sizes="(max-width: 860px) calc(100vw - 44px), 690px" alt="Flirt-It dating app: swipe, match and chat screens" width="1800" height="1125" loading="lazy">
           <span class="work-tile-index">01</span>
         </div>
         <div class="work-tile-body">
@@ -260,7 +259,7 @@
 
       <a class="work-tile work-tile--narrow work-tile--dark" href="/work" style="--tile-title:32px">
         <div class="work-tile-media work-tile-media--fill">
-          <img src="/assets/project-mdo-xcca.jpg" alt="MDO-XCCA collection dashboard, details redacted" width="1800" height="1125" loading="lazy">
+          <img src="/assets/project-mdo-xcca-1200.webp" srcset="/assets/project-mdo-xcca-640.webp 640w, /assets/project-mdo-xcca-1200.webp 1200w" sizes="(max-width: 860px) calc(100vw - 44px), 690px" alt="MDO-XCCA collection dashboard, details redacted" width="1800" height="1125" loading="lazy">
           <span class="work-tile-index">02</span>
         </div>
         <div class="work-tile-body">
@@ -274,7 +273,7 @@
 
       <a class="work-tile work-tile--wide" href="/work" style="--tile-bg:var(--color-olive)">
         <div class="work-tile-media">
-          <img src="/assets/project-brand.jpg" alt="Angelo Largo brand identity on cards, app icon and sticker" width="1800" height="1125" loading="lazy">
+          <img src="/assets/project-brand-1200.webp" srcset="/assets/project-brand-640.webp 640w, /assets/project-brand-1200.webp 1200w" sizes="(max-width: 860px) calc(100vw - 44px), 690px" alt="Angelo Largo brand identity on cards, app icon and sticker" width="1800" height="1125" loading="lazy">
           <span class="work-tile-index">03</span>
         </div>
         <div class="work-tile-body">
@@ -303,7 +302,7 @@
       <p class="hand">press play →</p>
     </div>
     <div class="intro-media">
-      <div class="video-frame"><video src="/assets/intro.mp4" poster="/assets/intro-poster.jpg" controls playsinline preload="metadata" aria-label="Whiteboard explainer video about Angelo Largo"></video></div>
+      <div class="video-frame"><video src="/assets/intro.mp4" poster="/assets/intro-poster-960.webp" controls playsinline preload="none" aria-label="Whiteboard explainer video about Angelo Largo"><track kind="captions" src="/assets/intro.vtt" srclang="en" label="English" default></video></div>
     </div>
   </section>
 
