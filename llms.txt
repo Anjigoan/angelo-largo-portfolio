@@ -1,0 +1,31 @@
+# Angelo Largo
+
+> Angelo Largo is a frontend web developer and Computer Science student in Cagayan de Oro, Philippines. He is open to developer and development-support jobs, and freelance projects are welcome too.
+
+He studies Computer Science at Xavier University – Ateneo de Cagayan. He designs in Figma, builds with HTML, CSS, JavaScript, React and Python (Flask), and works in VS Code with Git and GitHub. He uses Claude, ChatGPT and Gemini to learn and debug faster, and tests AI-written code himself before trusting it. He is remote-friendly and works with async teams and clients in Australia, the US and worldwide.
+
+## Pages
+
+- [Home](https://angelo-largo-portfolio.vercel.app/): Overview, selected work, 60-second intro video, client support approach and toolbox
+- [Work](https://angelo-largo-portfolio.vercel.app/work): Case studies, working style and services
+- [About](https://angelo-largo-portfolio.vercel.app/about): Background, the roles he is looking for, toolkit and timeline
+- [Contact](https://angelo-largo-portfolio.vercel.app/contact): Contact form, email and GitHub
+
+## Projects
+
+- [Flirt-It](https://github.com/Anjigoan/Flirt-It): A dating web app built for Software Engineering 1 with profiles, swipe-to-match and two-way messaging, using Python, Flask, Jinja templates, CSS and JavaScript
+- [Personal brand identity](https://angelo-largo-portfolio.vercel.app/work#brand-identity): The "peak and spark" logo, colour palette and type system for his own brand
+- [MDO-XCCA Collection System](https://angelo-largo-portfolio.vercel.app/work#mdo-xcca): A collection-management system with a full create, read, update and delete workflow. It is confidential under an NDA; private walkthroughs are available on request
+
+## Services
+
+- Landing pages: fast, responsive one-pagers for launches and small businesses
+- Portfolio sites: personal sites with personality
+- Web app UI: React interfaces and dashboards from Figma designs
+- Website updates: content edits, fixes and ongoing site support
+
+## Contact
+
+- Email: angelo.largo27@gmail.com
+- GitHub: https://github.com/Anjigoan
+- Location: Cagayan de Oro, Philippines (remote-friendly)

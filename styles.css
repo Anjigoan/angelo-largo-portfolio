@@ -88,6 +88,33 @@ dd {
   margin: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10000;
+  padding: 12px 20px;
+  border: 2px solid var(--color-ink);
+  border-radius: 999px;
+  color: var(--color-ink);
+  background: var(--color-orange);
+  font-weight: 700;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
 /* Page frame */
 
 .page {
@@ -502,9 +529,15 @@ dd {
   pointer-events: none;
 }
 
+/* The H1 holds both names; contents lets the portrait still layer between them. */
+.hero-title {
+  display: contents;
+}
+
 .hero-name {
   position: relative;
   z-index: 1;
+  display: block;
   margin-top: 56px;
   color: var(--color-cream);
   font-size: clamp(110px, 21vw, 330px);

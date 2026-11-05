@@ -2,9 +2,9 @@
 
 Angelo's personal portfolio: a four-page site that shows his work and helps him land developer and development-support jobs, plus freelance projects.
 
-**Live site:** _add your deployed link here (e.g. GitHub Pages, Netlify, Vercel)_
+**Live site:** [angelo-largo-portfolio.vercel.app](https://angelo-largo-portfolio.vercel.app)
 
-This README is your guide to the site: what each page does, how the brand works, and how to update things yourself. It's plain HTML, CSS and JavaScript, so there's nothing to install or build.
+This README is your guide to the site: what each page does, how the brand works, and how to update things yourself. It's plain HTML, CSS and JavaScript, so there's no build step.
 
 ## Contents
 
@@ -13,17 +13,18 @@ This README is your guide to the site: what each page does, how the brand works,
 - [Project files](#project-files)
 - [How to update things](#how-to-update-things)
 - [Contact form](#contact-form)
+- [SEO and AI](#seo-and-ai)
 - [Run it on your computer](#run-it-on-your-computer)
-- [Put it online](#put-it-online)
+- [Publishing](#publishing)
 
 ## The pages
 
-| Page | File | What it's for | What's on it |
-| --- | --- | --- | --- |
-| Home | `index.html` | First impression | Hero, intro statement, tools marquee, selected work, 60-second video, how you support clients, toolbox |
-| Work | `work.html` | Proof of what you can do | Filterable case studies, working style, services |
-| About | `about.html` | Who you are | Your story, what you're looking for, toolkit, timeline, video |
-| Contact | `contact.html` | Getting the message | Contact form, email, GitHub, location |
+| Page | Address | File | What it's for | What's on it |
+| --- | --- | --- | --- | --- |
+| Home | `/` | `index.html` | First impression | Hero, intro statement, tools marquee, selected work, 60-second video, how you support clients, toolbox |
+| Work | `/work` | `work.html` | Proof of what you can do | Filterable case studies, working style, services |
+| About | `/about` | `about.html` | Who you are | Your story, what you're looking for, toolkit, timeline, video |
+| Contact | `/contact` | `contact.html` | Getting the message | Contact form, email, GitHub, location |
 
 Every page shares the same navigation and footer.
 
@@ -108,8 +109,13 @@ All three are free on Google Fonts and load automatically.
 ├── contact.html     Contact
 ├── styles.css       All styling, with brand colours and fonts at the top
 ├── script.js        Mobile menu, project filters, contact form, cursor effect
+├── vercel.json      Removes .html from page addresses
+├── robots.txt       Tells crawlers they're welcome and where the sitemap is
+├── sitemap.xml      List of pages for search engines
+├── llms.txt         Plain-text summary of the site for AI tools
 └── assets/
     ├── favicon.svg            Logo mark, shown in the browser tab
+    ├── apple-touch-icon.png   Icon for iPhone home screens
     ├── angelo-hero.png        Cut-out portrait for the Home hero
     ├── angelo-peace.jpg       Small photo inside the Home statement
     ├── angelo-poster.jpg      Poster on the About page
@@ -127,6 +133,8 @@ All three are free on Google Fonts and load automatically.
 
 **Change a menu item, email address or footer text:** the navigation and footer are copied into every page, so update all four HTML files. Your editor's "find in files" makes this quick. Check the footer's © year each January too.
 
+**Link between pages:** use clean addresses like `/work`, never `work.html`.
+
 **Swap an image:** replace the file in `assets/` and keep the same name. Project images are 1800 × 1125 pixels (16:10), so stick to that shape to avoid cropping.
 
 **Add a tool or skill:** copy an existing sticker and change its label. `--bg` sets the colour and `--rot` sets the tilt:
@@ -141,6 +149,7 @@ All three are free on Google Fonts and load automatically.
 2. In `work.html`, copy a whole `<article class="case ...">` block and update it. Its `data-category` must be `web`, `brand` or `sys` so the filters can find it.
 3. In `index.html`, add it to the Selected work grid and update the count in "Selected work (03)".
 4. Add it to the timeline in `about.html` if it's a big one.
+5. Add it to the schema in `work.html` and to `llms.txt`. See [SEO and AI](#seo-and-ai).
 
 **Add a new filter:** add a button with a new `data-filter` value in `work.html`, and use that same value as `data-category` on the project.
 
@@ -150,26 +159,38 @@ The form sends through [Formspree](https://formspree.io), so messages go to the 
 
 To use a different Formspree form, replace the `action` link on the `<form>` in `contact.html`. After any change, send yourself a real test message from the live site.
 
+## SEO and AI
+
+Every page already has a unique title (50–60 characters), a description (120–160 characters), one H1, a canonical link, social sharing tags and schema.
+
+- **Schema** is the `<script type="application/ld+json">` block near the top of each page. It tells search engines and AI tools who you are, what you've built and what you offer. Only state things that are true and also on the page.
+- **`llms.txt`** is a plain-text summary of you and your work for AI tools.
+- **`sitemap.xml`** lists every page, and `robots.txt` points crawlers to it.
+
+**When you add or change content:** update the page, then the matching schema and `llms.txt`. If you add a page, give it its own title, description, canonical link and schema, and add it to `sitemap.xml`.
+
+**When you update a page:** change its `lastmod` date in `sitemap.xml` and its `dateModified` in the schema.
+
+**If the site moves to a custom domain:** replace `angelo-largo-portfolio.vercel.app` everywhere. It appears in all four HTML files, `sitemap.xml`, `robots.txt` and `llms.txt`.
+
+**Check your work:**
+
+- [Google Rich Results Test](https://search.google.com/test/rich-results) and [Schema Markup Validator](https://validator.schema.org) for schema
+- [Google Search Console](https://search.google.com/search-console) to submit `sitemap.xml` and see how Google indexes the site
+
 ## Run it on your computer
 
-Open `index.html` directly in a browser, or start a small local server:
+Clean page addresses need a small local server, so double-clicking `index.html` won't work. You'll need [Node.js](https://nodejs.org). From this folder, run:
 
 ```bash
-python3 -m http.server 8000
+npx serve
 ```
 
-Then visit `http://localhost:8000`.
+Then open the address it prints.
 
-## Put it online
+## Publishing
 
-The simplest free option is GitHub Pages:
-
-1. In this repo, go to **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select `main` and `/ (root)`, then save.
-4. Wait a few minutes, then copy the link to the top of this README.
-
-Each time you push to `main`, the site updates.
+The site is hosted on [Vercel](https://vercel.com). Each time you push to `main`, Vercel publishes the update. Old addresses like `/work.html` redirect to `/work` automatically.
 
 ## Contact
 
