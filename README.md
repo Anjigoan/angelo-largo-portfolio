@@ -118,6 +118,7 @@ All three are free Google Fonts under the SIL Open Font License. They live in `a
 └── assets/
     ├── fonts/                 Site fonts
     ├── *.webp                 Compressed images that the pages load
+    ├── *.avif                 Extra-small hero and poster images for modern browsers
     ├── intro.vtt              Captions for the video
     ├── favicon.svg            Logo mark, shown in the browser tab
     ├── apple-touch-icon.png   Icon for iPhone home screens
@@ -140,7 +141,7 @@ All three are free Google Fonts under the SIL Open Font License. They live in `a
 
 **Link between pages:** use clean addresses like `/work`, never `work.html`.
 
-**Swap an image:** pages load the `.webp` files in `assets/`, in more than one size, and the large `.jpg` and `.png` files are for social previews and schema. Make a new image in the same shape (project images are 16:10), convert it to WebP at the same sizes, for example with [Squoosh](https://squoosh.app), and keep the same file names. Keep images small, because they have the biggest effect on PageSpeed.
+**Swap an image:** pages load the `.webp` files in `assets/`, in more than one size, and the large `.jpg` and `.png` files are for social previews and schema. Make a new image in the same shape (project images are 16:10), convert it to WebP at the same sizes (plus AVIF for the hero and About poster), for example with [Squoosh](https://squoosh.app), and keep the same file names. Stay at quality 85 or higher so images remain sharp. Keep images small, because they have the biggest effect on PageSpeed.
 
 **Change the video:** update `intro.vtt` so its captions match, plus the `transcript` in the schema on the Home and About pages.
 
