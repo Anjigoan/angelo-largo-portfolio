@@ -1123,7 +1123,7 @@ dd {
   align-items: center;
   gap: 56px;
   padding-top: 40px;
-  padding-bottom: 120px;
+  padding-bottom: 56px;
 }
 
 .intro-copy {
@@ -1188,7 +1188,7 @@ dd {
 /* Home client support */
 
 .support {
-  padding-top: 120px;
+  padding-top: 56px;
   padding-bottom: 40px;
 }
 
@@ -2613,6 +2613,14 @@ textarea.input {
   .about-hero {
     gap: 56px;
     padding-top: calc(var(--header-space) + 88px);
+  }
+
+  .intro {
+    padding-bottom: 32px;
+  }
+
+  .support {
+    padding-top: 40px;
   }
 
   .case-media {
