@@ -26,6 +26,10 @@
 
   --container: 1280px;
   --rev-rotate: 0deg;
+
+  --header-top: 22px;
+  --header-top-scrolled: 10px;
+  --header-height: 60px;
 }
 
 * {
@@ -34,9 +38,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-top-scrolled) + var(--header-height) + 24px);
 }
 
 body {
+  /* Set here so the per-page --header-top values below are picked up. */
+  --header-space: calc(var(--header-top) + var(--header-height));
+
   margin: 0;
   color: var(--color-ink);
   background: var(--color-cream);
@@ -45,6 +53,11 @@ body {
 
 .page-home {
   --rev-rotate: 1.5deg;
+  --header-top: 38px;
+}
+
+.page-work {
+  --header-top: 60px;
 }
 
 img,
@@ -312,13 +325,23 @@ dd {
 
 /* Navigation */
 
+/* Fixed, not sticky: the hero boxes clip overflow, which would trap a sticky header. */
 .site-header {
-  position: relative;
-  z-index: 6;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
   display: flex;
   justify-content: center;
-  padding: 22px 20px 0;
+  padding: var(--header-top) 20px 0;
   color: var(--color-ink);
+  pointer-events: none;
+  transition: transform 0.3s var(--ease-soft);
+}
+
+.site-header.is-scrolled {
+  transform: translateY(calc(var(--header-top-scrolled) - var(--header-top)));
 }
 
 .nav-bar {
@@ -332,6 +355,12 @@ dd {
   border: 2px solid var(--color-ink);
   border-radius: 999px;
   background: var(--color-paper);
+  pointer-events: auto;
+  transition: box-shadow 0.3s;
+}
+
+.is-scrolled .nav-bar {
+  box-shadow: 0 5px 0 var(--color-ink);
 }
 
 .brand {
@@ -418,13 +447,15 @@ dd {
 
 .nav-panel {
   position: absolute;
-  top: 88px;
+  top: calc(var(--header-space) + 8px);
   right: 20px;
   left: 20px;
-  z-index: 60;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
   gap: 6px;
+  max-height: calc(100dvh - var(--header-space) - 32px);
+  pointer-events: auto;
   padding: 22px 24px 24px;
   border: 2px solid var(--color-ink);
   border-radius: 30px;
@@ -538,7 +569,7 @@ dd {
   position: relative;
   z-index: 1;
   display: block;
-  margin-top: 56px;
+  padding-top: calc(var(--header-top) + var(--header-height) - 16px + 56px);
   color: var(--color-cream);
   font-size: clamp(110px, 21vw, 330px);
   font-weight: 800;
@@ -1346,7 +1377,7 @@ dd {
 
 .work-hero {
   position: relative;
-  padding: 22px 20px 90px;
+  padding: 0 20px 90px;
   border-radius: 48px;
   background: var(--color-sage);
 }
@@ -1372,7 +1403,7 @@ dd {
 .work-hero-copy {
   position: relative;
   z-index: 2;
-  padding-top: 90px;
+  padding-top: calc(var(--header-space) - 16px + 90px);
 }
 
 .work-hero-copy .hand {
@@ -1680,7 +1711,7 @@ dd {
 .about-hero {
   align-items: center;
   gap: 88px;
-  padding-top: 112px;
+  padding-top: calc(var(--header-space) + 112px);
   padding-bottom: 120px;
 }
 
@@ -1922,7 +1953,7 @@ dd {
 
 .contact {
   gap: 64px;
-  padding-top: 70px;
+  padding-top: calc(var(--header-space) + 70px);
   padding-bottom: 110px;
 }
 
@@ -2501,6 +2532,10 @@ textarea.input {
 }
 
 @media (max-width: 860px) {
+  :root {
+    --header-height: 64px;
+  }
+
   .wrap {
     padding-right: 20px;
     padding-left: 20px;
@@ -2527,7 +2562,7 @@ textarea.input {
   }
 
   .hero-name {
-    margin-top: 40px;
+    padding-top: calc(var(--header-top) + var(--header-height) - 16px + 40px);
     font-size: 23vw;
     overflow-wrap: normal;
   }
@@ -2577,7 +2612,7 @@ textarea.input {
 
   .about-hero {
     gap: 56px;
-    padding-top: 88px;
+    padding-top: calc(var(--header-space) + 88px);
   }
 
   .case-media {

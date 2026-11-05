@@ -29,6 +29,17 @@ if (menuButton && nav) {
   });
 }
 
+const siteHeader = document.querySelector("[data-site-header]");
+
+if (siteHeader) {
+  const updateHeader = () => {
+    siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+}
+
 const cursorArea = document.querySelector("[data-cursor-area]");
 
 if (cursorArea) {
