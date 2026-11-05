@@ -498,9 +498,8 @@ dd {
   left: 50%;
   margin: -1200px 0 0 -1200px;
   max-width: none;
+  /* Keep this static: rotating an SVG this large drops Firefox to about 2fps. */
   pointer-events: none;
-  animation: spin 90s linear infinite;
-  transform-origin: 50% 50%;
 }
 
 .hero-name {
