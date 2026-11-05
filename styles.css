@@ -1,3 +1,13 @@
+/* Arial tuned to Bricolage's size, so text barely moves when the real font loads. */
+@font-face {
+  font-family: "Bricolage Fallback";
+  src: local("Arial"), local("Roboto");
+  size-adjust: 92%;
+  ascent-override: 101%;
+  descent-override: 29%;
+  line-gap-override: 0%;
+}
+
 @font-face {
   font-family: "Bricolage Grotesque";
   font-style: normal;
@@ -26,7 +36,7 @@
 }
 
 :root {
-  --font-body: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Bricolage Grotesque", "Bricolage Fallback", system-ui, sans-serif;
   --font-accent: "Instrument Serif", Georgia, serif;
   --font-hand: "Caveat", cursive;
 
@@ -40,6 +50,8 @@
   --color-sage: #c8d19c;
   --color-sage-soft: #e3e8c8;
   --color-orange: #ff6a2b;
+  --color-orange-text: #b93c0a;
+  --color-orange-soft: #ffb38a;
   --color-lime: #b6f24a;
   --color-pink: #f2d7dd;
   --color-muted: #4a5040;
@@ -834,6 +846,14 @@ dd {
   background: var(--color-orange);
 }
 
+/* Keeps the whole badge clickable, while the spinning text stays out of the link's name. */
+.available-badge-core::after {
+  position: absolute;
+  inset: -43px;
+  content: "";
+  border-radius: 50%;
+}
+
 /* Home statement */
 
 .statement {
@@ -1177,7 +1197,7 @@ dd {
 
 .intro-copy .hand {
   display: inline-block;
-  color: var(--color-orange);
+  color: var(--color-orange-text);
   font-size: 32px;
   transform: rotate(-4deg);
 }
@@ -1304,7 +1324,7 @@ dd {
 }
 
 .ai-note .hand {
-  color: var(--color-orange);
+  color: var(--color-orange-text);
   font-size: 30px;
   transform: rotate(-3deg);
 }
@@ -1736,7 +1756,7 @@ dd {
 /* About */
 
 .about-hero {
-  align-items: center;
+  align-items: flex-start;
   gap: 88px;
   padding-top: calc(var(--header-space) + 112px);
   padding-bottom: 120px;
@@ -1815,6 +1835,10 @@ dd {
 .looking-for .eyebrow {
   color: var(--color-lime);
   font-size: 13px;
+}
+
+.looking-for .text-orange {
+  color: var(--color-orange-soft);
 }
 
 .looking-for h2 {
@@ -1944,7 +1968,7 @@ dd {
 
 .timeline .hand {
   margin-bottom: 2px;
-  color: var(--color-orange);
+  color: var(--color-orange-text);
   font-size: 26px;
 }
 
@@ -2007,7 +2031,7 @@ dd {
 }
 
 .contact-intro h1 .it {
-  color: var(--color-orange);
+  color: var(--color-orange-text);
   letter-spacing: -0.03em;
 }
 

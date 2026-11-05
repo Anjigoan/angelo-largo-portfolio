@@ -27,7 +27,7 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/webp" imagesrcset="/assets/angelo-hero-360.webp 360w, /assets/angelo-hero-603.webp 603w" imagesizes="(max-width: 860px) 310px, 395px" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="/assets/angelo-hero-360.webp 360w, /assets/angelo-hero-540.webp 540w, /assets/angelo-hero-603.webp 603w" imagesizes="(max-width: 860px) 310px, 395px" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
@@ -115,12 +115,13 @@
         "@type": "VideoObject",
         "@id": "https://angelo-largo-portfolio.vercel.app/#intro-video",
         "name": "Angelo Largo: 60-second intro",
-        "description": "A whiteboard explainer covering who Angelo Largo is, the tools he uses, how he works with AI, and what he has built.",
+        "description": "A whiteboard animation covering who Angelo Largo is, the tools he uses, how he works with AI, and what he has built.",
         "thumbnailUrl": "https://angelo-largo-portfolio.vercel.app/assets/intro-poster.jpg",
         "contentUrl": "https://angelo-largo-portfolio.vercel.app/assets/intro.mp4",
         "uploadDate": "2026-11-05",
         "duration": "PT58S",
-        "inLanguage": "en"
+        "inLanguage": "en",
+        "transcript": "A whiteboard animation with background music and no narration. On screen: Hi, meet Angelo Largo. His background: Computer Science, Xavier University – Ateneo de Cagayan; hunting for dev jobs; Cagayan de Oro, Philippines. His toolkit: React components, HTML and CSS, and responsive layouts, desktop plus mobile from day one. His AI copilots: Claude and ChatGPT. How he works: Plan, Build, Check, Ship. Real projects: Flirt-It, a web app, and MDO-XCCA, a collection system with CRUD, under NDA. Open to developer jobs and freelance. Think. Build. Repeat."
       }
     ]
   }
@@ -166,7 +167,7 @@
 
       <h1 class="hero-title"><span class="hero-name"><span class="rise" style="--delay:0.15s">A</span><span class="rise" style="--delay:0.23s">N</span><span class="rise" style="--delay:0.31s">G</span><span class="rise" style="--delay:0.39s">E</span><span class="rise" style="--delay:0.47s">L</span><span class="rise" style="--delay:0.55s">O</span></span> <span class="hero-surname fade" style="--delay:1.5s"><span>L</span><span>A</span><span>R</span><span>G</span><span>O</span></span><span class="visually-hidden">, frontend web developer</span></h1>
 
-      <img class="hero-portrait" src="/assets/angelo-hero-603.webp" srcset="/assets/angelo-hero-360.webp 360w, /assets/angelo-hero-603.webp 603w" sizes="(max-width: 860px) 310px, 395px" alt="Angelo Largo smiling, hands in pockets" width="603" height="1100" fetchpriority="high">
+      <img class="hero-portrait" src="/assets/angelo-hero-603.webp" srcset="/assets/angelo-hero-360.webp 360w, /assets/angelo-hero-540.webp 540w, /assets/angelo-hero-603.webp 603w" sizes="(max-width: 860px) 310px, 395px" alt="Angelo Largo smiling, hands in pockets" width="603" height="1100" fetchpriority="high">
 
       <div class="hero-note hero-note--left">
         <p class="hand pop" style="--rot:-8deg;--delay:1.6s">web developer<br>&amp; problem solver</p>
@@ -195,19 +196,19 @@
         <span class="sticker" style="right:6%;top:60%;--bg:var(--color-pink);--rot:-6deg">Python</span>
       </div>
 
-      <a class="hire-card fade" style="--delay:2.4s" href="/contact">
+      <a class="hire-card fade" style="--delay:.6s" href="/contact">
         <span class="status-dot"></span>
         <span class="hire-card-text"><b>Open to developer jobs</b><br><small>Freelance welcome too</small></span>
         <span class="hire-card-btn">Hire me <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#1E2214" stroke-width="2.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"></path></svg></span>
       </a>
 
-      <a class="available-badge fade hide-sm" style="--delay:2.4s" href="/contact" aria-label="Available for work, contact Angelo">
+      <div class="available-badge fade hide-sm" style="--delay:.6s">
         <svg class="spin" width="150" height="150" viewBox="0 0 150 150" aria-hidden="true">
           <defs><path id="available-circle" d="M75 75 m-56 0 a56 56 0 1 1 112 0 a56 56 0 1 1 -112 0"></path></defs>
           <text><textPath href="#available-circle" textLength="348" lengthAdjust="spacing">AVAILABLE FOR WORK • AVAILABLE FOR WORK • </textPath></text>
         </svg>
-        <span class="available-badge-core"><svg width="26" height="26" viewBox="0 0 16 16" fill="none" stroke="#1E2214" stroke-width="2" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"></path></svg></span>
-      </a>
+        <a class="available-badge-core" href="/contact" aria-label="Available for work, contact Angelo"><svg width="26" height="26" viewBox="0 0 16 16" fill="none" stroke="#1E2214" stroke-width="2" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"></path></svg></a>
+      </div>
     </div>
   </section>
 
@@ -302,7 +303,7 @@
       <p class="hand">press play →</p>
     </div>
     <div class="intro-media">
-      <div class="video-frame"><video src="/assets/intro.mp4" poster="/assets/intro-poster-960.webp" controls playsinline preload="none" aria-label="Whiteboard explainer video about Angelo Largo"><track kind="captions" src="/assets/intro.vtt" srclang="en" label="English" default></video></div>
+      <div class="video-frame"><video src="/assets/intro.mp4" poster="/assets/intro-poster-960.webp" controls playsinline preload="none" aria-label="Whiteboard explainer video about Angelo Largo"><track kind="captions" src="/assets/intro.vtt" srclang="en" label="English"></video></div>
     </div>
   </section>
 
@@ -459,6 +460,6 @@
   </footer>
   </div>
 
-  <script src="/script.js"></script>
+  <script src="/script.js" defer></script>
 </body>
 </html>

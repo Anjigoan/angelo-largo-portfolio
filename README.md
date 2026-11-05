@@ -74,6 +74,8 @@ These are defined at the top of `styles.css`, so change them there and the whole
 | --- | --- | --- | --- |
 | Olive | `#4E5B31` | `--color-olive` | Home hero, accent text |
 | Tangerine | `#FF6A2B` | `--color-orange` | Main buttons, highlights |
+| Deep tangerine | `#B93C0A` | `--color-orange-text` | Orange text on cream, so it stays readable |
+| Soft tangerine | `#FFB38A` | `--color-orange-soft` | Orange text on olive |
 | Cream | `#F3EEDF` | `--color-cream` | Page background, text on dark |
 | Ink | `#1E2214` | `--color-ink` | Main text, borders, hard shadows |
 | Paper | `#FBF8F0` | `--color-paper` | Cards, navigation, form fields |
@@ -85,7 +87,7 @@ These are defined at the top of `styles.css`, so change them there and the whole
 
 ### Fonts
 
-All three are free on Google Fonts and load automatically.
+All three are free Google Fonts under the SIL Open Font License. They live in `assets/fonts/`, so the site loads them itself.
 
 | Font | Used for |
 | --- | --- |
@@ -114,6 +116,9 @@ All three are free on Google Fonts and load automatically.
 ├── sitemap.xml      List of pages for search engines
 ├── llms.txt         Plain-text summary of the site for AI tools
 └── assets/
+    ├── fonts/                 Site fonts
+    ├── *.webp                 Compressed images that the pages load
+    ├── intro.vtt              Captions for the video
     ├── favicon.svg            Logo mark, shown in the browser tab
     ├── apple-touch-icon.png   Icon for iPhone home screens
     ├── angelo-hero.png        Cut-out portrait for the Home hero
@@ -135,7 +140,9 @@ All three are free on Google Fonts and load automatically.
 
 **Link between pages:** use clean addresses like `/work`, never `work.html`.
 
-**Swap an image:** replace the file in `assets/` and keep the same name. Project images are 1800 × 1125 pixels (16:10), so stick to that shape to avoid cropping.
+**Swap an image:** pages load the `.webp` files in `assets/`, in more than one size, and the large `.jpg` and `.png` files are for social previews and schema. Make a new image in the same shape (project images are 16:10), convert it to WebP at the same sizes, for example with [Squoosh](https://squoosh.app), and keep the same file names. Keep images small, because they have the biggest effect on PageSpeed.
+
+**Change the video:** update `intro.vtt` so its captions match, plus the `transcript` in the schema on the Home and About pages.
 
 **Add a tool or skill:** copy an existing sticker and change its label. `--bg` sets the colour and `--rot` sets the tilt:
 
