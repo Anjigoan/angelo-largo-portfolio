@@ -6,34 +6,40 @@ A personal portfolio site built to support my search for an OJT/internship place
 
 ## About
 
-This site introduces me as a BS Computer Science student, outlines the areas I'm focused on (frontend development, React practice, and a support-oriented working style), and gives visitors a simple way to get in touch.
+This site introduces me as a frontend web developer in Cagayan de Oro, shows my work, and gives visitors a simple way to get in touch. I'm open to developer and development-support jobs, and freelance projects are welcome too.
 
 ## Features
 
-- Responsive layout that adapts from desktop down to mobile, including a collapsible nav menu
-- Tabbed skills section (Frontend / Programming / Workflow)
-- Accordion-style education section
-- One-click "copy email" button with clipboard fallback for older browsers
-- Built with accessibility in mind — semantic HTML, ARIA attributes on interactive components, and a logical heading structure
+- Four pages: Home, Work, About and Contact
+- Responsive layout that adapts from desktop down to mobile, including a full-screen style mobile menu
+- Filterable case studies on the Work page
+- Contact form that sends through Formspree, with a visible error if a message fails
+- 60-second video intro
+- Scroll reveals and playful motion that switch off for visitors who prefer reduced motion
+- Built with accessibility in mind: semantic HTML and ARIA attributes on interactive components
 
 ## Tech Stack
 
 - HTML5
 - CSS3 (custom properties, CSS Grid/Flexbox, no framework)
 - Vanilla JavaScript (no dependencies)
+- Formspree for contact form delivery
 
 ## Project Structure
 
 ```
-Portfolio 2nd/
+.
 ├── index.html
+├── work.html
+├── about.html
+├── contact.html
 ├── styles.css
 ├── script.js
 ├── assets/
-│   ├── favicon.svg
-│   └── hero-workspace.jpg
 └── README.md
 ```
+
+The navigation and footer are repeated in each HTML page, so change them in all four.
 
 ## Running Locally
 
@@ -50,8 +56,8 @@ http://localhost:8000
 ## Contact
 
 - Email: angelo.largo27@gmail.com
-- Phone: 0927 028 5246
+- GitHub: [@Anjigoan](https://github.com/Anjigoan)
 
 ## Status
 
-Actively updated as I complete more projects and coursework. Next planned addition: a dedicated Projects section with screenshots and links.
+Actively updated as I complete more projects.

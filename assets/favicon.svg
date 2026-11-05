@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title>AL monogram</title>
-  <rect width="64" height="64" rx="8" fill="#12302f"/>
-  <path d="M18 46L29 18h7l11 28h-8l-2-6H27l-2 6h-7zm11-13h6l-3-9-3 9z" fill="#ffffff"/>
-  <path d="M43 18h7v28h-7V18z" fill="#c8953f"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="28" fill="#1E2214"/><path d="M20 74 L42 26 L64 74 H80" fill="none" stroke="#F3EEDF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="42" cy="58" r="9" fill="#FF6A2B"/></svg>
