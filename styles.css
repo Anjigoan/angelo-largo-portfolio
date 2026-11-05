@@ -9,6 +9,13 @@
 }
 
 @font-face {
+  font-family: "Instrument Fallback";
+  font-style: italic;
+  src: local("Georgia Italic"), local("Times New Roman Italic");
+  size-adjust: 84%;
+}
+
+@font-face {
   font-family: "Bricolage Grotesque";
   font-style: normal;
   font-weight: 300 800;
@@ -37,7 +44,7 @@
 
 :root {
   --font-body: "Bricolage Grotesque", "Bricolage Fallback", system-ui, sans-serif;
-  --font-accent: "Instrument Serif", Georgia, serif;
+  --font-accent: "Instrument Serif", "Instrument Fallback", Georgia, serif;
   --font-hand: "Caveat", cursive;
 
   --color-ink: #1e2214;
